@@ -20,8 +20,15 @@ public class Program {
 		
 		
 		System.out.println("===== TESTE 2: seller findByDepartment =====");
-		List<Seller> sellerList = sellerDao.findByDepartment(new Department(2, null));
-		for (Seller sellerCurrent : sellerList) {
+		List<Seller> sellerListByDepartment = sellerDao.findByDepartment(new Department(2, null));
+		for (Seller sellerCurrent : sellerListByDepartment) {
+			System.out.println(sellerCurrent);
+		}
+		System.out.println("\n");
+		
+		System.out.println("===== TESTE 3: seller findAll =====");
+		List<Seller> listOfAllSelles = sellerDao.findAll();
+		for (Seller sellerCurrent : listOfAllSelles) {
 			System.out.println(sellerCurrent);
 		}
 		System.out.println("\n");
