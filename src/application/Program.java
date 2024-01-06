@@ -40,6 +40,14 @@ public class Program {
 		System.out.println("new id: " + seller2.getId());
 		System.out.println("\n");
 		
+		System.out.println("===== TESTE 5: seller update =====");
+		Seller seller3 = sellerDao.findById(10);
+		seller3.setBaseSalary(3940.0);
+		seller3.setBirthDate(LocalDate.now());
+		sellerDao.update(seller3);
+	    seller3 = sellerDao.findById(10);
+		System.out.println(seller3);
+		
 		
 
 	}
