@@ -34,11 +34,11 @@ public class Program {
 		}
 		System.out.println("\n");
 		
-		System.out.println("===== TESTE 4: seller insert =====");
-		Seller seller2 = new Seller(null, "Greg", "greg@gmail.com", LocalDate.now(), 4000.0, new Department(2, null));
-		sellerDao.insert(seller2);
-		System.out.println("new id: " + seller2.getId());
-		System.out.println("\n");
+//		System.out.println("===== TESTE 4: seller insert =====");
+//		Seller seller2 = new Seller(null, "Greg", "greg@gmail.com", LocalDate.now(), 4000.0, new Department(2, null));
+//		sellerDao.insert(seller2);
+//		System.out.println("new id: " + seller2.getId());
+//		System.out.println("\n");
 		
 		System.out.println("===== TESTE 5: seller update =====");
 		Seller seller3 = sellerDao.findById(10);
@@ -47,6 +47,14 @@ public class Program {
 		sellerDao.update(seller3);
 	    seller3 = sellerDao.findById(10);
 		System.out.println(seller3);
+		System.out.println("\n");
+		
+		System.out.println("===== TESTE 6: seller deleteById =====");
+		Seller seller4 = sellerDao.findById(15);
+		System.out.println(seller4);
+		sellerDao.deleteById(15);
+		seller4 = sellerDao.findById(15);
+		System.out.println(seller4);
 		
 		
 

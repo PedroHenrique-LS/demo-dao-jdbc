@@ -11,7 +11,7 @@ void insert(Seller seller);
 	
 	void update(Seller seller);
 	
-	void delete(Integer Id);
+	void deleteById(Integer Id);
 	
 	Seller findById(Integer Id);
 	
