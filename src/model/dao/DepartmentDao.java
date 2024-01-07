@@ -3,7 +3,6 @@ package model.dao;
 import java.util.List;
 
 import model.entities.Department;
-import model.entities.Seller;
 
 public interface DepartmentDao {
 	
@@ -11,11 +10,11 @@ public interface DepartmentDao {
 	
 	void update(Department department);
 	
-	void delete(Integer Id);
+	void deleteById(Integer Id);
 	
 	Department findById(Integer Id);
 	
-	List<Seller> findAll();
+	List<Department> findAll();
 	
 
 }

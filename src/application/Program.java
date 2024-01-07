@@ -3,6 +3,7 @@ package application;
 import java.time.LocalDate;
 import java.util.List;
 
+import db.DB;
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
 import model.entities.Department;
@@ -56,7 +57,7 @@ public class Program {
 		seller4 = sellerDao.findById(15);
 		System.out.println(seller4);
 		
-		
+	    DB.closeConnection();
 
 	}
 
